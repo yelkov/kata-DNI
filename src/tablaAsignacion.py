@@ -26,3 +26,6 @@ class tablaAsignacion:
             "K",
             "E",
         ]
+        
+    def getListaLetra(self):
+        return self.tabla
