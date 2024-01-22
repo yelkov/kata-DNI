@@ -29,3 +29,6 @@ class tablaAsignacion:
         
     def getListaLetra(self):
         return self.tabla
+    
+    def getNumLetras(self):
+        return len(self.tabla)
