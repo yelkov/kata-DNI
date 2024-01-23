@@ -32,3 +32,13 @@ class tablaAsignacion:
     
     def getNumLetras(self):
         return len(self.tabla)
+    
+    def getLetra(self):
+        
+    
+    def calcularLetra(self,DNI):
+        posicion = int(DNI) % self.getNumLetras()
+        return 
+    
+    def __repr__(self) -> str:
+        return self.getListaLetra
