@@ -1,8 +1,11 @@
-class tablaAsignacion:
-    
-    def __init__(self):
-        self.tabla = [  
-            "T",
+import pytest
+from src.tablaAsignacion import tablaAsignacion
+
+def test_prueba():
+    inyector = tablaAsignacion()
+    resultado = inyector.getListaLetra()
+
+    valor_esperado = ["T",
             "R",
             "W",
             "A",
@@ -24,8 +27,5 @@ class tablaAsignacion:
             "L",
             "C",
             "K",
-            "E",
-        ]
-        
-    def getListaLetra(self):
-        return self.tabla
+            "E"] 
+    assert resultado == valor_esperado
