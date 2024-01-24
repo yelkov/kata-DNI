@@ -27,5 +27,5 @@ class tablaAsignacion:
             "E",
         ]
         
-    def getListaLetra(self):
+    def getListaLetras(self):
         return self.tabla

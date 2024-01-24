@@ -1,11 +1,14 @@
 import pytest
 from src.tablaAsignacion import tablaAsignacion
 
-def test_prueba():
-    inyector = tablaAsignacion()
-    resultado = inyector.getListaLetra()
+@pytest.fixture
+def inyector():
+    tabla = tablaAsignacion()
+    return tabla
 
-    valor_esperado = ["T",
+def test_devolverListaLetras(inyector):
+    assert inyector.getListaLetras() == [  
+            "T",
             "R",
             "W",
             "A",
@@ -27,5 +30,5 @@ def test_prueba():
             "L",
             "C",
             "K",
-            "E"] 
-    assert resultado == valor_esperado
+            "E",
+        ]
