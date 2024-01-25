@@ -35,3 +35,6 @@ class tablaAsignacion:
     
     def getLength(self):
         return len(tablaAsignacion.getTabla(self))
+    
+    def getPosition(self,DNI):
+        return int(DNI) % tablaAsignacion.getLength(self)

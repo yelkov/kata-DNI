@@ -43,3 +43,9 @@ def test_getLetra(inyector):
 @pytest.mark.getLength
 def test_getLenght(inyector):
     assert inyector.getLength() == 23
+
+@pytest.mark.getPosition
+def test_getPosition(inyector):
+    assert inyector.getPosition('12345678') == 14
+    assert inyector.getPosition('98765432') == 5
+    assert inyector.getPosition('91234567') == 7
