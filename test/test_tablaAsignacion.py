@@ -6,8 +6,8 @@ def inyector():
     tabla = tablaAsignacion()
     return tabla
 
-def test_devolverListaLetras(inyector):
-    assert inyector.getListaLetras() == [  
+def test_devolverTabla(inyector):
+    assert inyector.getTabla() == [  
             "T",
             "R",
             "W",
