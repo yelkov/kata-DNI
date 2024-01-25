@@ -34,11 +34,11 @@ def test_devolverTabla(inyector):
             "E",
         ]
 
-@pytest.mark.getLetra 
-def test_getLetra(inyector):
-    assert inyector.getLetra(0) == 'T'
-    assert inyector.getLetra(2) == 'W'
-    assert inyector.getLetra(5) == 'M'
+@pytest.mark.getLetter
+def test_getLetter(inyector):
+    assert inyector.getLetter(0) == 'T'
+    assert inyector.getLetter(2) == 'W'
+    assert inyector.getLetter(5) == 'M'
 
 @pytest.mark.getLength
 def test_getLenght(inyector):
