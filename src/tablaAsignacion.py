@@ -38,3 +38,7 @@ class tablaAsignacion:
     
     def getPosition(self,DNI):
         return int(DNI) % tablaAsignacion.getLength(self)
+    
+    def calculateLetter(self,DNI):
+        return tablaAsignacion.getLetra(self, tablaAsignacion.getPosition(self,DNI))
+

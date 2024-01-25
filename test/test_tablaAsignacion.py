@@ -49,3 +49,10 @@ def test_getPosition(inyector):
     assert inyector.getPosition('12345678') == 14
     assert inyector.getPosition('98765432') == 5
     assert inyector.getPosition('91234567') == 7
+
+@pytest.mark.calculateLetter
+def test_calculateLetter(inyector):
+    assert inyector.calculateLetter('12345678') == 'Z'
+    assert inyector.calculateLetter('98765432') == 'M'
+    assert inyector.calculateLetter('91234567') == 'F'
+
