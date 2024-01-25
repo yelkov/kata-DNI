@@ -32,3 +32,6 @@ class tablaAsignacion:
 
     def getLetra(self,posicion):
         return self.tabla[posicion]
+    
+    def getLength(self):
+        return len(self.tabla)

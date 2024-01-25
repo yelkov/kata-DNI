@@ -39,3 +39,7 @@ def test_getLetra(inyector):
     assert inyector.getLetra(0) == 'T'
     assert inyector.getLetra(2) == 'W'
     assert inyector.getLetra(5) == 'M'
+
+@pytest.mark.getLength
+def test_getLenght(inyector):
+    assert inyector.getLength() == 23
