@@ -29,3 +29,6 @@ class tablaAsignacion:
         
     def getTabla(self):
         return self.tabla
+
+    def getLetra(self,posicion):
+        return self.tabla[posicion]
