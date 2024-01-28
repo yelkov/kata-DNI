@@ -27,10 +27,12 @@ class Dni:
         return self.getLetter() in self.tabla.getTabla()
     
     def checkDni(self):
-        if self.checkLen() and self.checkNumbers() and self.checkLetter() and self.getLetter() == self.tabla.calculateLetter(self.getNumbers()):
-            return True
-        else:
-            return False
+        return (
+             self.checkLen() and 
+             self.checkNumbers() and 
+             self.checkLetter() and 
+             self.getLetter() == self.tabla.calculateLetter(self.getNumbers())
+             )
 
 
     
