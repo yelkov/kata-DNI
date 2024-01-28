@@ -31,7 +31,10 @@ class tablaAsignacion:
         return self.tabla
 
     def getLetter(self,posicion):
-        return self.getTabla()[posicion]
+        try:
+            return self.getTabla()[posicion]
+        except IndexError:
+            return "La posición de la letra está fuera del índice."
     
     def getLength(self):
         return len(self.getTabla())
