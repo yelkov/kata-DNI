@@ -11,13 +11,15 @@ class Dni:
     def checkLen(self):
         return len(self.dni) == self.LENDNI
     
-    def checkNumbers(self):
+    def getNumbers(self):
         try:
-            numbers = int(self.dni[:8])
-            return True
-           
+            return int(self.dni[:8])
         except ValueError:
-            return False
+            return None 
+            
+    def checkNumbers(self):
+        return  True if self.getNumbers() else False
 
     def checkLetter(self):
         return self.dni[-1] in self.tabla.getTabla()
+    
