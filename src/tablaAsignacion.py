@@ -31,16 +31,16 @@ class tablaAsignacion:
         return self.tabla
 
     def getLetter(self,posicion):
-        return tablaAsignacion().getTabla()[posicion]
+        return self.getTabla()[posicion]
     
     def getLength(self):
-        return len(tablaAsignacion().getTabla())
+        return len(self.getTabla())
     
     def getPosition(self,DNI):
-        return int(DNI) % tablaAsignacion().getLength()
+        return int(DNI) % self.getLength()
     
     def calculateLetter(self,DNI):
-        return tablaAsignacion().getLetter(tablaAsignacion().getPosition(DNI))
+        return self.getLetter(self.getPosition(DNI))
 
     def __repr__(self) -> str:
-        return str(tablaAsignacion().getTabla())
+        return str(self.getTabla())
