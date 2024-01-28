@@ -5,8 +5,16 @@ class Dni:
     LENDNI = 9
 
     def __init__(self, dni):
-        tabla = tablaAsignacion().getTabla()
+        self.tabla = tablaAsignacion()
         self.dni = dni
     
     def checkLen(self):
         return len(self.dni) == self.LENDNI
+    
+    def checkNumbers(self):
+        try:
+            numbers = int(self.dni[:8])
+            return True
+           
+        except ValueError:
+            return False
