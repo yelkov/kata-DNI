@@ -18,3 +18,6 @@ class Dni:
            
         except ValueError:
             return False
+
+    def checkLetter(self):
+        return self.dni[-1] in self.tabla.getTabla()

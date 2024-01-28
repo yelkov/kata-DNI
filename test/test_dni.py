@@ -12,3 +12,8 @@ def test_checkLen():
 def test_checkNumbers():
     assert Dni('12345678A').checkNumbers()
     assert not Dni('A1234567B').checkNumbers()
+
+@pytest.mark.checkLetter
+def test_checkLetter():
+    assert Dni('12345678A').checkLetter()
+    assert not Dni('123456789O').checkLetter()
