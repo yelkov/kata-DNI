@@ -10,8 +10,16 @@ class Dni:
         self.dni = dni
         self.numbers = dni[:self.LENGHT_DNI_NUMBERS]
 
+
     def getDni(self):
         return self.dni
+    
+    def checkDni(self):
+        return (
+             self.isValidLenght() and 
+             self.isValidNumber() and 
+             self.isValidLetter()
+             )
     
     def isValidNumber(self):
         try:
@@ -29,19 +37,12 @@ class Dni:
     def isValidLenght(self):
         return len(self.dni) == self.LENGHT_DNI        
 
-
-    def isValidLetter(self):
+    def isLetterInTabla(self):
         return self.getLetter() in self.tabla.getTabla()
     
-    def checkDni(self):
-        return (
-             self.isValidLenght() and 
-             self.isValidNumber() and 
-             self.isValidLetter() and 
-             self.getLetter() == self.tabla.calculateLetter(self.getNumbers())
-             )
-
+    def isValidLetter(self):
+        return self.getLetter() == self.tabla.calculateLetter(self.getNumbers()) if self.isLetterInTabla() else False
+    
     def __repr__(self) -> str:
         return str(self.getDni)
 
-    

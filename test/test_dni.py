@@ -17,10 +17,10 @@ def test_isValidNumber():
     assert Dni('12345678A').isValidNumber()
     assert not Dni('A1234567B').isValidNumber()
 
-@pytest.mark.isValidLetter
-def test_isValidLetter():
-    assert Dni('12345678A').isValidLetter()
-    assert not Dni('123456789O').isValidLetter()
+@pytest.mark.isLetterInTabla
+def test_isLetterInTabla():
+    assert Dni('12345678A').isLetterInTabla()
+    assert not Dni('123456789O').isLetterInTabla()
 
 @pytest.mark.checkDni
 def test_checkDni():
