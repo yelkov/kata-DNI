@@ -2,21 +2,25 @@ import pytest
 from src.DNI import Dni
 
 
+@pytest.mark.getDni
+def test_getDni():
+    assert Dni('15900638W').getDni() == '15900638W'
+
 @pytest.mark.isValidLenght
 def test_isValidLenght():
     assert Dni("12312312A").isValidLenght()
     assert not Dni("123123ASFSD12A").isValidLenght()
     assert not Dni("1231").isValidLenght()
 
-@pytest.mark.checkNumbers
-def test_checkNumbers():
-    assert Dni('12345678A').checkNumbers()
-    assert not Dni('A1234567B').checkNumbers()
+@pytest.mark.isValidNumber
+def test_isValidNumber():
+    assert Dni('12345678A').isValidNumber()
+    assert not Dni('A1234567B').isValidNumber()
 
-@pytest.mark.checkLetter
-def test_checkLetter():
-    assert Dni('12345678A').checkLetter()
-    assert not Dni('123456789O').checkLetter()
+@pytest.mark.isValidLetter
+def test_isValidLetter():
+    assert Dni('12345678A').isValidLetter()
+    assert not Dni('123456789O').isValidLetter()
 
 @pytest.mark.checkDni
 def test_checkDni():
