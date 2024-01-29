@@ -9,6 +9,7 @@ class Dni:
         self.tabla = tablaAsignacion()
         self.dni = dni
         self.numbers = dni[:self.LENGHT_DNI_NUMBERS]
+        self.letter = dni[-1]
 
 
     def getDni(self):
@@ -29,19 +30,19 @@ class Dni:
             return False
 
     def getNumbers(self):
-        return int(self.numbers)
+        return int(self.numbers) if self.isValidNumber() else 'El número del DNI introducido no es válido.'
     
     def getLetter(self):
-        return self.dni[-1]
+        return self.dni[-1] if self.isValidLetter() else 'La letra del DNI introducido no es válida.'
 
     def isValidLenght(self):
         return len(self.dni) == self.LENGHT_DNI        
 
     def isLetterInTabla(self):
-        return self.getLetter() in self.tabla.getTabla()
+        return self.letter in self.tabla.getTabla()
     
     def isValidLetter(self):
-        return self.getLetter() == self.tabla.calculateLetter(self.getNumbers()) if self.isLetterInTabla() else False
+        return self.letter == self.tabla.calculateLetter(self.getNumbers()) if self.isLetterInTabla() else False
     
     def __repr__(self) -> str:
         return str(self.getDni)
