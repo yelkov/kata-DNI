@@ -39,6 +39,7 @@ def test_getLetter(inyector):
     assert inyector.getLetter(0) == 'T'
     assert inyector.getLetter(2) == 'W'
     assert inyector.getLetter(5) == 'M'
+    assert inyector.getLetter(26) == 'La posición de la letra está fuera del índice.'
 
 @pytest.mark.getLength
 def test_getLenght(inyector):
