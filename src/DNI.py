@@ -15,10 +15,10 @@ class Dni:
         return self.dni
 
     def getNumbers(self):
-        return int(self.numbers) if self.isValidNumber() else 'El número del DNI introducido no es válido.'
+        return int(self.numbers) if self.isValidNumber() else 'DNI number introduced is not valid.'
     
     def getLetter(self):
-        return self.letter if self.isValidLetter() else 'La letra del DNI introducido no es válida.'
+        return self.letter if self.isValidLetter() else 'DNI letter introduced is not valid.'
     
     def checkDni(self):
         return (

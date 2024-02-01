@@ -9,7 +9,7 @@ def main():
         print(f'DNI numbers are : {dni_user.getNumbers()}')
         print(f'DNI: {dni_user.getDni()} is valid.')
     else:
-        print('El código introducido no es correcto.')
+        print('DNI code introduced is not valid.')
     
 
 if __name__ == "__main__":
